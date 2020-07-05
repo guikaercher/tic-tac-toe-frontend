@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+    <header>
+        <link rel="stylesheet" type="text/css" href="game.css" media="screen" />
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.3.0/socket.io.dev.js"></script>
+        <script src="game.js"></script>
+    </header>
+    <body>
+        <div id="turn">
+            Your turn to play !
+        </div>
+          <table id="board">
+            <tr>
+              <td id="top-left"></td>
+              <td id="top-mid" class="vertical"></td>
+              <td id="top-right"></td>
+            </tr>
+            <tr>
+              <td id="mid-left" class="horizontal"></td>
+              <td id="mid-mid" class="vertical horizontal" ></td>
+              <td id="mid-right" class="horizontal"></td>
+            </tr>
+            <tr>
+              <td id="bottom-left"></td>
+              <td id="bottom-mid" class="vertical"></td>
+              <td id="bottom-right"></td>
+            </tr>
+          </table>
+    </body>
+    <footer>
+
+    </footer>
+</html>
