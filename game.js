@@ -4,11 +4,16 @@ const socket = io(devUrl)
 
 let symbol = 'O'
 
+const symbolDrawing ={
+    X: '<img src="images/x.png" width="50px" height="50px">',
+    O: '<img src="images/circle.png" width="50px" height="50px">'
+}
+
 const markSquare = (player, square) => {
     if (symbol === 'X') symbol = 'O'
     else if (symbol === 'O') symbol = 'X'
     console.log(symbol)
-    document.getElementById(square).innerHTML = symbol;
+    document.getElementById(square).innerHTML = symbolDrawing[symbol];
 }
 
 socket.on('click-render', (data) => {
