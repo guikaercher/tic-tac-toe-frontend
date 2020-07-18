@@ -1,13 +1,25 @@
 .vertical {
-border-left: 2px solid black;
-border-right: 2px solid black;
+  border-left: 4px solid white;
+  border-right: 4px solid white;
+  border-image: url('chalkborder.jpg') 20;
 }
 .horizontal {
-border-top: 2px solid black;
-border-bottom: 2px solid black;
+  border-top: 4px solid white;
+  border-bottom: 4px solid white;
+  border-image: url('chalkborder.jpg') 20;
+}
+
+body {
+  /* Location of the image */
+  background-image: url('game_background.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
 }
 
 table {
+    background: transparent;
     margin: 5px auto;
     margin-top: 170px;
     margin-left: auto;
@@ -16,18 +28,16 @@ table {
     height:250px;
 }
 td {
+    background: transparent;
     width: 50px;
     height: 50px;
     text-align: center;
   }
 
-body {
-    background-image: url('whiteboard.jpg');
-    background-repeat: no-repeat;
-    background-size: auto;
-    background-position-x: center;
-    background-position-y: 75px;
-}
+  .chalk-border {
+    border: 25px solid rgba(255,255,255,.8);
+    border-image: url('chalkborder.jpg') 20;
+  }
 
 button {
     background: transparent;

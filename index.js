@@ -3,12 +3,13 @@ const devUrl = 'http://localhost:3000'
 const socket = io(devUrl)
 
 const click = () => {
-    const playerName = document.getElementById('player-name-text').text
+    const playerName = document.getElementById('player-name-text').value
     socket.emit('player-register', {player: playerName});
 }
 
-socket.on('redirect', (destination) => {
-    window.location.href = destination;
+socket.on('welcome', (msg) => {
+    console.log(msg);
+    window.location.href = `http://127.0.0.1:8080/game`;
 });
 
 window.onload = () => {
